@@ -11,11 +11,11 @@ export default function Home({ posts }) {
   return (
     <div className={inter.className} style={{ maxWidth: '1200px', margin: 'auto', padding: '20px', fontFamily: 'Inter, sans-serif' }}>
       <Head>
-        <title>Tom Murphy - Notes</title>
+        <title>GCG - Clothing Examples</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 style={{ textAlign: 'center', fontWeight: '600' }}>Tom Murphy - Notes</h1>
+      <h1 style={{ textAlign: 'center', fontWeight: '600' }}>GCG - Clothing Examples</h1>
       <div style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
