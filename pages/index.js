@@ -37,9 +37,11 @@ export default function Home({ posts }) {
                 width={250} 
                 height={180} 
                 style={{ 
+                  maxWidth: '100%', // Responsive on mobile
+                  height: 'auto',   // Natural height
                   borderRadius: '8px', 
                   boxShadow: '0 4px 8px rgba(0,0,0,0.05)', 
-                  objectFit: 'contain' // Fixes squishing
+                  objectFit: 'contain' 
                 }} 
               />
             </a>

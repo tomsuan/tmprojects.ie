@@ -44,10 +44,11 @@ export default function FullImagePage({ item }) {
         width={800}
         height={600}
         style={{
-          maxWidth: '100%',
-          height: 'auto',
+          maxWidth: '100%', // Fit mobile screens
+          height: 'auto',   // Prevent elongation
           borderRadius: '8px',
           boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+          objectFit: 'contain', // Keep aspect ratio
         }}
       />
     </div>
