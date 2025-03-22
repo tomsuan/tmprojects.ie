@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -7,7 +5,7 @@ import matter from 'gray-matter';
 export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  const { data } = matter(fileContents); // Extract frontmatter (title, fullImage, etc.)
+  const { data } = matter(fileContents);
   return {
     props: { item: data },
   };
@@ -29,9 +27,21 @@ export default function FullImagePage({ item }) {
     return <p>Image not found</p>;
   }
   return (
-    <div>
-      <h1>{item.title}</h1>
-      <Image src={item.fullImage} alt={item.title} width={800} height={600} />
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      textAlign: 'center',
+      fontFamily: "'Inter', sans-serif", // Set font to Inter
+    }}>
+      <h1 style={{ marginBottom: '20px' }}>{item.title}</h1>
+      <img
+        src={item.fullImage}
+        alt={item.title}
+        style={{ maxWidth: '100%', height: 'auto' }} // Plain img tag for simplicity
+      />
     </div>
   );
 }
