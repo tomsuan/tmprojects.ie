@@ -3,13 +3,10 @@ import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ posts }) {
   return (
-    <div className={inter.className} style={{ maxWidth: '1200px', margin: 'auto', padding: '20px', fontFamily: 'Inter, sans-serif' }}>
+    <div style={{ maxWidth: '1200px', margin: 'auto', padding: '20px' }}>
       <Head>
         <title>GCG - Clothing Examples</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +36,11 @@ export default function Home({ posts }) {
                 alt={post.title} 
                 width={250} 
                 height={180} 
-                style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.05)' }} 
+                style={{ 
+                  borderRadius: '8px', 
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.05)', 
+                  objectFit: 'contain' // Fixes squishing
+                }} 
               />
             </a>
             <a href={post.link} target="_blank" rel="noopener noreferrer" 
@@ -78,7 +79,6 @@ export async function getStaticProps() {
     };
   });
 
-  // Sort posts in reverse chronological order (newest first)
   posts.sort((a, b) => b.date - a.date);
 
   return {

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Image from 'next/image';
 
 export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
@@ -34,13 +35,20 @@ export default function FullImagePage({ item }) {
       justifyContent: 'center',
       minHeight: '100vh',
       textAlign: 'center',
-      fontFamily: "'Inter', sans-serif", // Set font to Inter
+      padding: '20px',
     }}>
-      <h1 style={{ marginBottom: '20px' }}>{item.title}</h1>
-      <img
+      <h1 style={{ marginBottom: '20px', fontSize: '2rem', fontWeight: '600' }}>{item.title}</h1>
+      <Image
         src={item.fullImage}
         alt={item.title}
-        style={{ maxWidth: '100%', height: 'auto' }} // Plain img tag for simplicity
+        width={800}
+        height={600}
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+          borderRadius: '8px',
+          boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
+        }}
       />
     </div>
   );
