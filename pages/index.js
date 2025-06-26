@@ -8,11 +8,11 @@ export default function Home({ posts }) {
   return (
     <div style={{ maxWidth: '1200px', margin: 'auto', padding: '20px' }}>
       <Head>
-        <title>GCG - Clothing Examples</title>
+        <title>Sandbox for Daithi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 style={{ textAlign: 'center', fontWeight: '600' }}>GCG - Clothing Examples</h1>
+      <h1 style={{ textAlign: 'center', fontWeight: '600' }}>Sandbox for Daithi</h1>
       <div style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
