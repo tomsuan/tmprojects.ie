@@ -1,29 +1,29 @@
 {
-    "name": "my-website",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@emotion/react": "^11.14.0",
-        "@emotion/styled": "^11.14.0",
-        "@mui/material": "^5.16.14",
-        "eslint": "8.45.0",
-        "eslint-config-next": "13.4.10",
-        "framer-motion": "^12.4.7",
-        "gray-matter": "^4.0.3",
-        "jsdom": "^26.0.0",
-        "next": "^15.2.0",
-        "node-fetch": "^2.7.0",
-        "puppeteer": "^24.3.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "remark": "^15.0.1",
-        "remark-html": "^16.0.1",
-        "rss-parser": "^3.13.0"
-    }
+  "name": "my-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^5.16.14",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "framer-motion": "^12.4.7",
+    "gray-matter": "^4.0.3",
+    "jsdom": "^26.0.0",
+    "next": "15.2.8",
+    "node-fetch": "^2.7.0",
+    "puppeteer": "^24.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "rss-parser": "^3.13.0"
+  }
 }
